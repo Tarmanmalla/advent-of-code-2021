@@ -1,8 +1,9 @@
 import * as _ from 'lodash';
 import * as fs from 'fs';
+import * as path from 'path';
 
 let data: number[];
-data = fs.readFileSync('foo.txt','utf8').trim().split("\n").map((input: string): number => {
+data = fs.readFileSync(path.join(__dirname, 'day1.txt'),'utf8').trim().split("\n").map((input: string): number => {
     return parseInt(input);
 });
 
