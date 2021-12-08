@@ -15,12 +15,12 @@ interface A {
 
 let v1 = {
     h: 0,
-    d: 0
+    d: 0,
 } as A;
 
 _.forEach(data, command => {
-    let char = command.charAt(0);
-    let number = parseInt(command.replace( /^\D+/g, ''));
+    let char: string = command.charAt(0);
+    let number: number = parseInt(command.replace( /^\D+/g, ''));
     if (char === 'f') {
         v1.h = v1.h + number;
     } else if (char === 'd') {
@@ -40,8 +40,8 @@ let v2 = {
 } as A;
 
 _.forEach(data, command => {
-    let char = command.charAt(0);
-    let number = parseInt(command.replace( /^\D+/g, ''));
+    let char: string = command.charAt(0);
+    let number: number = parseInt(command.replace( /^\D+/g, ''));
     
     if (char === 'f') {
         v2.h = v2.h + number;
